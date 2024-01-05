@@ -1,0 +1,199 @@
+/*   Headings
+    "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, sans-serif
+
+    BODY
+    Helvetica, Arial, sans-serif
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;500;700;900&display=swap');
+
+
+:root {
+    --btn-color1: #25d366;
+    --btn-color2: #43cd66;
+    --pure-grey: #5e5e5e;
+    --blue-color: #0373e9;
+    --dark-bg1: #1c1e21;
+    --dark-bg2: #111b21;
+    --light-bg1: #f0f4f9;
+    --light-bg2: #fcf5eb;
+    --light-bg3: #ffffff;
+    --pure-black: #000000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-bg2);
+    font-family: 'Red Hat Display', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-weight: 500;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+
+/* Header Styling */
+
+header {
+    background-color: var(--light-bg1);
+}
+
+header nav li {
+    cursor: pointer;
+}
+
+
+header nav li div:last-child {
+    height: 3px;
+    width: 0%;
+    transition: width 0.5s ease-out;
+    background-color: var(--btn-color1);
+}
+
+
+header nav li:hover div:last-child {
+    height: 3px;
+    width: 100%;
+}
+
+header button, main button, footer button {
+    position: relative;
+    border: 1px solid var(--dark-bg2);
+    background-color: var(--btn-color1);
+    padding: 15px 30px;
+    border-radius: 35px;
+    overflow: hidden;
+    color: var(--dark-bg1);
+}
+
+main button:hover {
+    border: 1px solid #fff;
+}
+
+header button span, main button span, footer button span {
+    position: relative;
+    z-index: 100;
+    transition: color 0.3s ease-out;
+}
+
+header button:hover span, main button:hover span, footer button:hover span {
+    color: #fff;
+}
+
+main button:hover span, footer button:hover span {
+    color: var(--dark-bg2);
+}
+
+header button .circle, main button .circle, footer button .circle {
+    position: absolute;
+    top: 100%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--dark-bg2);
+    transition: top 0.3s ease-out;
+}
+
+main button .circle, footer button .circle {
+    background-color: #fff;
+}
+
+/* Hero Section Styling */
+
+main>div {
+    /* background-color: yellow; */
+    /* border: 3px solid red; */
+    background-image: url(images/main_bg_img.png);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+
+.learn-more span {
+    border-bottom: 3px solid var(--btn-color2);
+}
+
+.learn-more:hover {
+    color: var(--btn-color2);
+}
+
+
+section:nth-of-type(2) {
+    background-color: var(--dark-bg2);
+}
+
+
+footer {
+    background-color: var(--dark-bg2);
+}
+
+footer .footer-div a{
+    margin-block: 5px;
+    cursor: pointer;
+    /* font-size: 20px; */
+}
+
+footer .footer-div a:not(a:first-child) {
+    font-size: 20px;
+}
+footer .footer-div a:not(a:first-child):hover {
+    /* border-bottom: 2px solid #fff; */
+    text-decoration: underline;
+}
+
+
+footer .bottom-footer button {
+    /* display: block; */
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 0;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: var(--dark-bg1);
+}
+
+footer .bottom-footer button .circle {
+    background-color: var(--btn-color2);
+}
+
+::selection {
+    background-color: red;
+}
+
+select {
+    border: none;
+}
+
+
+/* Features Section Styling */
+
+
+.features-section>div:hover {
+    background-color: var(--btn-color1);
+    border: 1px solid black;
+    /* cursor: pointer; */
+}
+
+.features-section>div:hover div:first-child {
+    background-color: var(--dark-bg1) !important;
+    color: var(--btn-color1);
+}
+
+.add-border {
+    border-bottom: 0.5px solid lightslategray;
+}
+.add-cursor {
+    cursor: pointer;
+}
